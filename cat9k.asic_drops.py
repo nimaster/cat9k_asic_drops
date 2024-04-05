@@ -27,6 +27,8 @@ def highlight_drops(drops):
             print(f"{drop['asic']}/{drop['core']:<10} {drop['drop_name']:<42} {drop['drop_counter']}")
 
 drops = get_cli(sys.argv[1], sys.argv[2], sys.argv[3])
-print(json.dumps(drops, indent=2))
 
 highlight_drops(drops)
+
+print('\nComplete Drop Counter Data:')
+print(json.dumps(drops, indent=2))
